@@ -4,12 +4,14 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import mongoose from "mongoose";
 import methodOverride from "method-override";
+import ejsMate from "ejs-mate";
 import { Campground } from "./models/campgroung.js";
 
 const __file = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__file);
 const app = express();
 
+app.engine("ejs", ejsMate);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
