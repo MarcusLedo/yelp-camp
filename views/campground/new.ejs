@@ -1,22 +1,20 @@
 <% layout("/layouts/boilerplate") %>
 
 <h1>New Campground!</h1>
-<main>
-  <form action="/campgrounds" method="POST">
-    <div class="form-field title-field">
-      <label for="title"><b>Title</b></label>
-      <input type="text" name="campground[title]" id="title" />
-    </div>
+<form action="/campgrounds" method="POST">
+  <div class="form-field title-field">
+    <label for="title"><b>Title</b></label>
+    <input type="text" name="campground[title]" id="title" />
+  </div>
 
-    <div class="form-field location-field">
-      <label for="location"><b>Location</b></label>
-      <input type="text" name="campground[location]" id="location" />
-    </div>
+  <div class="form-field location-field">
+    <label for="location"><b>Location</b></label>
+    <input type="text" name="campground[location]" id="location" />
+  </div>
 
-    <div class="form-field btn-field">
-      <button type="submit">Add</button>
-    </div>
-  </form>
-  <br />
-  <a href="/campgrounds">Back</a>
-</main>
+  <div class="form-field btn-field">
+    <button type="submit">Add</button>
+  </div>
+</form>
+<br />
+<a href="/campgrounds">Back</a>
